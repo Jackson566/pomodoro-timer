@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pomodoro Timer</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="tabs">
+    <button class="tab active" data-view="timer">计时器</button>
+    <button class="tab" data-view="stats">统计</button>
+    <button class="tab" data-view="settings">设置</button>
+  </nav>
+
+  <!-- Timer View -->
+  <section id="timer-view" class="view active">
+    <div class="phase-label" id="phase-label">专注</div>
+
+    <div class="timer-ring">
+      <svg viewBox="0 0 200 200">
+        <circle class="ring-bg" cx="100" cy="100" r="88" />
+        <circle class="ring-progress" id="ring-progress" cx="100" cy="100" r="88" />
+      </svg>
+      <div class="timer-display" id="timer-display">25:00</div>
+    </div>
+
+    <input type="text" id="task-label" class="task-input" placeholder="你在做什么？" maxlength="50">
+
+    <div class="controls">
+      <button class="btn btn-start" id="btn-start">开始</button>
+      <button class="btn btn-pause" id="btn-pause" style="display:none">暂停</button>
+      <button class="btn btn-reset" id="btn-reset">重置</button>
+    </div>
+
+    <div class="progress-dots" id="progress-dots">
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+  </section>
+
+  <!-- Stats View -->
+  <section id="stats-view" class="view">
+    <div class="stats-cards">
+      <div class="stat-card">
+        <div class="stat-value" id="today-count">0</div>
+        <div class="stat-label">今日番茄</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value" id="total-count">0</div>
+        <div class="stat-label">总计番茄</div>
+      </div>
+    </div>
+
+    <div class="chart-section">
+      <h3>最近 7 天</h3>
+      <div class="bar-chart" id="bar-chart"></div>
+    </div>
+
+    <div class="today-list-section">
+      <h3>今日记录</h3>
+      <ul class="today-list" id="today-list">
+        <li class="empty">暂无记录</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Settings View -->
+  <section id="settings-view" class="view">
+    <div class="setting-group">
+      <label>专注时长（分钟）</label>
+      <input type="number" id="set-work" min="1" max="120" value="25">
+    </div>
+    <div class="setting-group">
+      <label>短休息时长（分钟）</label>
+      <input type="number" id="set-short" min="1" max="60" value="5">
+    </div>
+    <div class="setting-group">
+      <label>长休息时长（分钟）</label>
+      <input type="number" id="set-long" min="1" max="60" value="15">
+    </div>
+    <div class="setting-group">
+      <label>长休息前番茄数</label>
+      <input type="number" id="set-before-long" min="2" max="10" value="4">
+    </div>
+    <div class="setting-group">
+      <label>提示音</label>
+      <div class="toggle-row">
+        <span id="sound-status">开启</span>
+        <label class="toggle">
+          <input type="checkbox" id="set-sound" checked>
+          <span class="toggle-slider"></span>
+        </label>
+      </div>
+    </div>
+    <div class="setting-group">
+      <label>音量</label>
+      <input type="range" id="set-volume" min="0" max="100" value="80">
+    </div>
+    <button class="btn btn-save" id="btn-save-settings">保存设置</button>
+    <div class="save-msg" id="save-msg"></div>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+</html>

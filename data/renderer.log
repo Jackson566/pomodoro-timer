@@ -1,0 +1,24 @@
+[WARN] init() called
+[WARN] store loaded: {"settings":{"workDuration":25,"shortBreakDuration":5,"longBreakDuration":15,"pomodorosBeforeLongBre
+[WARN] sound path: /Users/jiangyiming/Downloads/Apps/project/first_cc/assets/sounds/bell.wav
+[WARN] init() done
+[ERROR] %cElectron Security Warning (Insecure Content-Security-Policy) font-weight: bold; This renderer process has either no Content Security
+  Policy set or a policy with "unsafe-eval" enabled. This exposes users of
+  this app to unnecessary security risks.
+
+For more information and help, consult
+https://electronjs.org/docs/tutorial/security.
+This warning will not show up
+once the app is packaged.
+[ERROR] %cElectron Security Warning (Insecure Content-Security-Policy) font-weight: bold; This renderer process has either no Content Security
+  Policy set or a policy with "unsafe-eval" enabled. This exposes users of
+  this app to unnecessary security risks.
+
+For more information and help, consult
+https://electronjs.org/docs/tutorial/security.
+This warning will not show up
+once the app is packaged.
+[WARN] start clicked
+[WARN] start clicked
+[WARN] start clicked
+[WARN] start clicked
