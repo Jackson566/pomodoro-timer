@@ -1,0 +1,16 @@
+{
+  "settings": {
+    "workDuration": 25,
+    "shortBreakDuration": 5,
+    "longBreakDuration": 15,
+    "pomodorosBeforeLongBreak": 4,
+    "soundEnabled": true,
+    "soundVolume": 0.8
+  },
+  "stats": {},
+  "currentSession": {
+    "label": "",
+    "phase": "work",
+    "pomodorosCompleted": 0
+  }
+}
